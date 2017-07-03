@@ -6,10 +6,8 @@
     <style>
       :host {
         display: block;
-        outline: 1px solid red;
       }
     </style>
-    <h2>Hello [[prop1]]!</h2>
     <battle-ship />
   </template>
 
@@ -21,15 +19,10 @@
     class BattleButtonApp extends Polymer.Element {
       static get is() { return 'battle-button-app'; }
       static get properties() {
-        return {
-          prop1: {
-            type: String,
-            value: 'battle-button-app'
-          }
-        };
+        return {}
       }
     }
 
-    window.customElements.define(BattleButtonApp.is, BattleButtonApp);
+    window.customElements.define(BattleButtonApp.is, BattleButtonApp)
   </script>
 </dom-module>

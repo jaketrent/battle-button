@@ -1,0 +1,42 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="battle-button">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      button {
+        height: 2em;
+        width: 2em;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 0;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: lightgrey;
+      }
+      button:active {
+        background-color: red;
+      }
+    </style>
+    <button></button>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class BattleButton extends Polymer.Element {
+      static get is() { return 'battle-button'; }
+      static get properties() {
+        return {}
+      }
+    }
+
+    window.customElements.define(BattleButton.is, BattleButton)
+  </script>
+</dom-module>

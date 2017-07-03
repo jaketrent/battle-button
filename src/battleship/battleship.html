@@ -1,14 +1,29 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../battle-button/battle-button.html">
 
 <dom-module id="battle-ship">
   <template>
     <style>
       :host {
-        display: block;
-        outline: 1px solid blue;
+        display: inline-block;
+      }
+      .deck {
+        display: flex;
+        justify-content: flex-start;
+        background: grey;
+        padding: 0.5em 1.5em;
+        border-radius: 25% / 50%;
+      }
+      battle-button + battle-button {
+        margin-left: 0.5em;
       }
     </style>
-    <h2>Battle-Ship!</h2>
+    <div class="deck">
+      <battle-button></battle-button>
+      <battle-button></battle-button>
+      <battle-button></battle-button>
+      <battle-button></battle-button>
+    </div>
   </template>
 
   <script>
@@ -19,15 +34,10 @@
     class BattleShip extends Polymer.Element {
       static get is() { return 'battle-ship'; }
       static get properties() {
-        return {
-          prop1: {
-            type: String,
-            value: 'battle-ship'
-          }
-        };
+        return {}
       }
     }
 
-    window.customElements.define(BattleShip.is, BattleShip);
+    window.customElements.define(BattleShip.is, BattleShip)
   </script>
 </dom-module>
