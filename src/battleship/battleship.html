@@ -1,16 +1,14 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../battleship/battleship.html">
 
-<dom-module id="battle-button-app">
+<dom-module id="battle-ship">
   <template>
     <style>
       :host {
         display: block;
-        outline: 1px solid red;
+        outline: 1px solid blue;
       }
     </style>
-    <h2>Hello [[prop1]]!</h2>
-    <battle-ship />
+    <h2>Battle-Ship!</h2>
   </template>
 
   <script>
@@ -18,18 +16,18 @@
      * @customElement
      * @polymer
      */
-    class BattleButtonApp extends Polymer.Element {
-      static get is() { return 'battle-button-app'; }
+    class BattleShip extends Polymer.Element {
+      static get is() { return 'battle-ship'; }
       static get properties() {
         return {
           prop1: {
             type: String,
-            value: 'battle-button-app'
+            value: 'battle-ship'
           }
         };
       }
     }
 
-    window.customElements.define(BattleButtonApp.is, BattleButtonApp);
+    window.customElements.define(BattleShip.is, BattleShip);
   </script>
 </dom-module>
