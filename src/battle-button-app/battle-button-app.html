@@ -1,0 +1,33 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="battle-button-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+        outline: 1px solid red;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class BattleButtonApp extends Polymer.Element {
+      static get is() { return 'battle-button-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'battle-button-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(BattleButtonApp.is, BattleButtonApp);
+  </script>
+</dom-module>

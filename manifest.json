@@ -1,0 +1,7 @@
+{
+  "name": "battle-button",
+  "short_name": "battle-button",
+  "description": "buttons were made for battles",
+  "start_url": "/",
+  "display": "standalone"
+}
