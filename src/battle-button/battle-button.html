@@ -7,19 +7,65 @@
         display: block;
       }
       button {
-        height: 2em;
+        position: relative;
+        z-index: 2;
+        display: inline-block;
         width: 2em;
-        border-radius: 50%;
-        background-color: #fff;
+        height: 5em;
+        margin-top: -7em;
         border: 0;
+        background-color: #fff;
         box-shadow: 5px 3px 5px rgba(0, 0, 0, .5);
+        background: linear-gradient(90deg, #fff, #aba);
         cursor: pointer;
       }
+      button:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -0.5em;
+        z-index: 3;
+        display: inline-block;
+        width: 2em;
+        height: 1em;
+        background: #efefef;
+        border-bottom: 1px solid grey;
+        border-radius: 50%;
+      }
+      button:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -0.5em;
+        z-index: 0;
+        display: inline-block;
+        width: 2em;
+        height: 1em;
+        border-bottom: 1px solid grey;
+        background: linear-gradient(90deg, #fff, #aba);
+        border-radius: 50%;
+      }
+      button:focus,
       button:hover {
-        background-color: lightgrey;
+        outline: none;
+        background: linear-gradient(90deg, grey, #242424);
+      }
+      button:focus:before,
+      button:hover:before {
+        background: grey;
+      }
+      button:focus:after,
+      button:hover:after {
+        background: linear-gradient(90deg, grey, #242424);
       }
       button:active {
-        background-color: red;
+        background: linear-gradient(90deg, red, darkred);
+      }
+      button:active:before {
+        background: red;
+      }
+      button:active:after {
+        background: linear-gradient(90deg, red, darkred);
       }
     </style>
     <button></button>
