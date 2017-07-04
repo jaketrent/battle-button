@@ -59,17 +59,18 @@
       button:hover:after {
         background: linear-gradient(90deg, grey, #242424);
       }
-      button:active {
+      button.hit {
         background: linear-gradient(90deg, red, darkred);
       }
-      button:active:before {
+      button.hit:before {
         background: red;
+        border-bottom: 1px solid darkred;
       }
-      button:active:after {
+      button.hit:after {
         background: linear-gradient(90deg, red, darkred);
       }
     </style>
-    <button></button>
+    <button class$="[[state]]" on-click="handleClick"></button>
   </template>
 
   <script>
@@ -80,7 +81,15 @@
     class BattleButton extends Polymer.Element {
       static get is() { return 'battle-button'; }
       static get properties() {
-        return {}
+        return {
+          state: {
+            type: String,
+            value: 'normal'
+          }
+        }
+      }
+      handleClick(a, b) {
+        console.log('click', a, b, this)
       }
     }
 
